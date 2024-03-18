@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- подключаем файл со сбросом стилей -->
     <link rel="stylesheet" href="css/reset.css">
+    <!-- подключаем файл с основными стилями -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- это будет шапка сайта, внутри будет контейнер согласно макету -->
+    <header class="header">
+        <!-- и уже внутри контейнера всё будет делиться на части: меню, логотипы -->
+        <div class="container">
+            <!-- внутреннее содержимое шапки, то есть header__inner - это как общий блок, в котором будут логотипы и меню со списком -->
+             <div class="header__inner">
+                <!-- знак решётки в href мы ставим, когда не знаем, куда ссылка переходит. -->
+                <a href="#" class="logo">
+                    <!-- внутри у нас будет картинка логотипа -->
+                    <img src="images/logo.svg" alt="TealuxE">
+                </a>
+                <!-- далее у нас будет навигационное меню, и меню принято делать списком, это удобно для семантики и доступности сайта -->
+                <nav class="menu">
+                    <!-- следующим образом можно развернуть список меню -->
+                    <!-- ul.menu__list>li.menu__item*5>a.menu__link[href=#] -->
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#" class="menu__link">Black</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Green</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">White</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Oolong</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Pu-erh</a></li>
+                    </ul>
+                </nav>
+                <!-- менюшки с переходом по ссылке тоже сделаем с помощью списка ul. -->
+                <ul class="user-actions">
+                    <li class="user-actions__item">
+                        <!-- a.user-actions__link[href=#]>img[src=images/cart.svg] -->
+                        <a href="#" class="user-actions__link"><img src="images/cart.svg" alt=""></a>
+                    </li>
+                    <li class="user-actions__item">
+                        <!-- a.user-actions__link[href=#]>img[src=images/user.svg] -->
+                        <a href="#" class="user-actions__link"><img src="images/user.svg" alt=""></a>
+                    </li>
+                    <li class="user-actions__item">
+                        <!-- а вот поиск у нас может быть разный... Если он ссылочный и куда-то переходит, то также делаем через тег а. 
+                        Кстати говоря, если например наш поиск должен как-то был выезжать, то здесь вместо тега а можно использовать button. -->
+                            <a href="#" class="user-actions__link">
+                                <img src="images/search.svg" alt="">
+                            </a>
+
+                       <!-- Но у нас в макете такого не прорисовано. Поэтому мы сделаем через тег search, и внутри него мы сделаем тег form c 
+                    input и button type=submit. -->
+
+                    <!-- <search>
+                        <form action="">
+                            <input type="search" />
+                            <button type="submit"></button>
+                        </form>
+                    </search> -->
+                    </li>
+                </ul>
+             </div>
+        </div>
+    </header>
+    <!-- подключаем файл с JS. -->
+     <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- подключаем шрифты. Сначала ищем нужные шрифты с google fonts, выбираем их и нужные начертания, затем мы идем способом через <link>
+    и сюда вставляем ссылку "Embed code in the <head> of your html". затем в css-файлы вставляем правила для шрифта, в частности всегда
+        оставляем свойство font-family, и иногда font-weight. самый часто встречающийся шрифт пишем в body.   -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
     <!-- подключаем файл со сбросом стилей -->
     <link rel="stylesheet" href="css/reset.css">
     <!-- подключаем файл с основными стилями -->
@@ -43,7 +49,8 @@
                         <!-- a.user-actions__link[href=#]>img[src=images/user.svg] -->
                         <a href="#" class="user-actions__link"><img src="images/user.svg" alt=""></a>
                     </li>
-                    <li class="user-actions__item">
+                    <!-- добавляем класс-модификатор user-actions__item-search, чтобы написать какие-то отдельные стили -->
+                    <li class="user-actions__item user-actions__item-search">
                         <!-- а вот поиск у нас может быть разный... Если он ссылочный и куда-то переходит, то также делаем через тег а. 
                         Кстати говоря, если например наш поиск должен как-то был выезжать, то здесь вместо тега а можно использовать button. -->
                             <a href="#" class="user-actions__link">
